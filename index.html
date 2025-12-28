@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- TITRE GOOGLE -->
+    <title>Mustapha Ourhalouch | Développeur Web Junior</title>
+
+    <!-- SEO -->
+    <meta name="description" content="Portfolio de Mustapha Ourhalouch, développeur web junior spécialisé en sites modernes, responsives et performants en HTML, CSS et JavaScript.">
+    <meta name="keywords" content="développeur web, portfolio développeur, HTML CSS JavaScript, site web Maroc, développeur junior">
+    <meta name="author" content="Mustapha Ourhalouch">
+
+    <!-- RESPONSIVE -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- STYLE -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+    <nav class="navbar">
+        <div class="logo">Mustapha Ourhalouch</div>
+
+        <ul class="nav-links">
+    <li><a href="#about">À propos</a></li>
+    <li><a href="#skills">Compétences</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#contact">Contact</a></li>
+</ul>
+ù
+
+        <button id="darkModeBtn">🌙</button>
+    </nav>
+
+    <div class="hero">
+        <h1>Développeur Web</h1>
+        <p>
+            Sites vitrine • Portfolios • Mini e-commerce<br>
+            Solutions simples, modernes et responsives.
+        </p>
+
+        <a href="#contact" class="btn-primary">Me contacter</a>
+        <a href="cv-mustapha.pdf" class="btn-secondary" download>
+            📄 Télécharger mon CV
+        </a>
+    </div>
+</header>
+
+<main>
+
+    <!-- À PROPOS -->
+    <section id="about" class="reveal">
+        <h2>À propos</h2>
+        <p>
+            Je suis étudiant en BTS Développement des Systèmes Informatiques,
+            passionné par le développement web et la création de solutions modernes.
+        </p>
+    </section>
+
+    <!-- COMPÉTENCES -->
+    <section id="skills" class="reveal">
+        <h2>Compétences</h2>
+
+        <div class="skills-grid">
+            <div class="skill">💻 HTML / CSS</div>
+            <div class="skill">⚙️ JavaScript</div>
+            <div class="skill">⚛️ React (bases)</div>
+            <div class="skill">☕ Spring Boot (bases)</div>
+        </div>
+    </section>
+
+    <!-- PROJETS -->
+    <section id="services" class="reveal">
+    <h2>Services</h2>
+
+    <div class="services-grid">
+
+        <div class="service-card">
+            <h3>🌐 Site vitrine</h3>
+            <p>
+                Création d’un site web moderne et responsive pour présenter
+                votre activité, vos services et vos coordonnées.
+            </p>
+        </div>
+
+        <div class="service-card">
+            <h3>👤 Portfolio personnel</h3>
+            <p>
+                Conception de portfolios professionnels pour étudiants,
+                freelances ou chercheurs de stage.
+            </p>
+        </div>
+
+        <div class="service-card">
+            <h3>🛒 Mini e-commerce</h3>
+            <p>
+                Développement d’un petit site e-commerce avec catalogue
+                produits et panier simple.
+            </p>
+        </div>
+
+        <div class="service-card">
+            <h3>🛠️ Maintenance & amélioration</h3>
+            <p>
+                Mise à jour, correction et amélioration de sites web existants.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+
+    <!-- CONTACT -->
+    <section id="contact" class="reveal">
+        <h2>Contact</h2>
+
+        <p style="text-align:center; margin-bottom:15px;">
+            ⏱️ Réponse sous 24 heures – sérieux et motivé.
+        </p>
+
+        <form id="contactForm" class="contact-form">
+            <input type="text" id="name" placeholder="Votre nom" required>
+            <input type="email" id="email" placeholder="Votre email" required>
+            <textarea id="message" placeholder="Votre message" required></textarea>
+            <button type="submit">Envoyer sur WhatsApp</button>
+        </form>
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2025 Mustapha Ourhalouch – Développeur Web</p>
+</footer>
+
+<!-- Bouton WhatsApp flottant -->
+<a href="https://wa.me/212620443194" class="whatsapp-float" target="_blank" title="Me contacter sur WhatsApp">
+    💬
+</a>
+
+<!-- JAVASCRIPT -->
+<script src="script.js"></script>
+
+</body>
+</html>
