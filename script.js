@@ -1,40 +1,61 @@
 document.addEventListener("DOMContentLoaded", () => {
 
+    /* ===== MODE SOMBRE ===== */
     const darkBtn = document.getElementById("darkModeBtn");
-    darkBtn.addEventListener("click", () => {
-        document.body.classList.toggle("dark");
-    });
+    if (darkBtn) {
+        darkBtn.addEventListener("click", () => {
+            document.body.classList.toggle("dark");
+        });
+    }
 
+    /* ===== FORMULAIRE CONTACT → WHATSAPP ===== */
     const form = document.getElementById("contactForm");
 
-    form.addEventListener("submit", (e) => {
-        e.preventDefault();
+    if (form) {
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
 
-        const name = document.getElementById("name").value;
-        const email = document.getElementById("email").value;
-        const message = document.getElementById("message").value;
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const message = document.getElementById("message").value.trim();
 
-        const phone = "2126XXXXXXXX"; // ⚠️ TON NUMÉRO
+            if (!name || !email || !message) {
+                alert("Veuillez remplir tous les champs.");
+                return;
+            }
 
-        const text =
-            `Bonjour Mustapha\n\nNom: ${name}\nEmail: ${email}\nMessage: ${message}`;
+            // ⚠️ Numéro WhatsApp (sans +, sans espaces)
+            const phone = "212620443194";
 
-        const url = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
-        window.open(url, "_blank");
-    });
+            const text =
+`Bonjour Mustapha 👋
+
+Nom : ${name}
+Email : ${email}
+
+Message :
+${message}`;
+
+            const url = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
+            window.open(url, "_blank");
+        });
+    }
+
+    /* ===== ANIMATION AU SCROLL ===== */
+    const reveals = document.querySelectorAll(".reveal");
+
+    function revealOnScroll() {
+        reveals.forEach(el => {
+            const windowHeight = window.innerHeight;
+            const elementTop = el.getBoundingClientRect().top;
+
+            if (elementTop < windowHeight - 100) {
+                el.classList.add("active");
+            }
+        });
+    }
+
+    window.addEventListener("scroll", revealOnScroll);
+    revealOnScroll();
 
 });
-// ANIMATION AU SCROLL
-const reveals = document.querySelectorAll(".reveal");
-
-function revealOnScroll() {
-    reveals.forEach(el => {
-        const windowHeight = window.innerHeight;
-        const elementTop = el.getBoundingClientRect().top;
-        if (elementTop < windowHeight - 100) {
-            el.classList.add("active");
-        }
-    });
-}
-window.addEventListener("scroll", revealOnScroll);
-revealOnScroll();
