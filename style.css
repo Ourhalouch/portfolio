@@ -1,309 +1,203 @@
-/* =========================
-   RESET & BASE
-========================= */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 body {
-    font-family: "Segoe UI", Arial, sans-serif;
-    background: #f8fafc;
-    color: #1f2933;
-    line-height: 1.6;
+    font-family:'Poppins', sans-serif;
+    background:#0f172a;
+    color:white;
 }
 
-/* =========================
-   HEADER & NAVBAR
-========================= */
-.header {
-    background: linear-gradient(135deg, #16a34a, #065f46);
-    color: white;
+/* MODE CLAIR */
+body:not(.dark) {
+    background:#f8fafc;
+    color:#111;
 }
 
+body:not(.dark) section {
+    background:white;
+}
+
+/* NAVBAR */
 .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px 30px;
-    flex-wrap: wrap;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 50px;
 }
 
-.logo {
-    font-size: 26px;
-    font-weight: bold;
+.logo span {
+    font-weight:bold;
 }
 
+/* MENU */
 .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 15px;
+    display:flex;
+    gap:20px;
+    list-style:none;
 }
 
-.nav-links li a {
-    color: white;
-    text-decoration: none;
-    padding: 8px 16px;
-    border-radius: 20px;
-    transition: background 0.3s;
+.nav-links a {
+    padding:8px 16px;
+    border-radius:20px;
+    border:1px solid rgba(255,255,255,0.2);
+    text-decoration:none;
+    color:inherit;
+    transition:0.3s;
 }
 
-.nav-links li a:hover {
-    background: rgba(255,255,255,0.2);
+.nav-links a:hover {
+    background:#22c55e;
+    color:black;
+    transform:translateY(-3px);
 }
 
+/* DARK BUTTON */
 #darkModeBtn {
-    background: white;
-    border: none;
-    padding: 8px 12px;
-    border-radius: 50%;
-    cursor: pointer;
+    width:38px;
+    height:38px;
+    border-radius:50%;
+    border:none;
+    background:#1e293b;
+    color:white;
+    cursor:pointer;
 }
 
-/* =========================
-   HERO
-========================= */
+/* HERO */
 .hero {
-    text-align: center;
-    padding: 90px 20px;
+    text-align:center;
+    padding:100px 20px;
+}
+
+.profile-pic {
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    border:4px solid #22c55e;
+    box-shadow:0 0 40px rgba(34,197,94,0.6);
 }
 
 .hero h1 {
-    font-size: 42px;
+    font-size:45px;
+    color:#22c55e;
 }
 
 .hero p {
-    margin: 15px 0;
-    font-size: 18px;
+    margin:20px 0 30px;
 }
 
+/* BUTTONS */
 .btn-primary {
-    display: inline-block;
-    background: white;
-    color: #16a34a;
-    padding: 14px 30px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: bold;
-    margin: 10px;
-    transition: transform 0.2s;
-}
-
-.btn-primary:hover {
-    transform: scale(1.08);
+    background:#22c55e;
+    padding:12px 25px;
+    border-radius:25px;
+    color:black;
+    margin:10px;
+    text-decoration:none;
 }
 
 .btn-secondary {
-    display: inline-block;
-    padding: 14px 30px;
-    background: transparent;
-    color: white;
-    border: 2px solid white;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: bold;
-    margin: 10px;
-    transition: background 0.3s, color 0.3s;
+    border:2px solid #22c55e;
+    padding:12px 25px;
+    border-radius:25px;
+    color:#22c55e;
+    margin:10px;
+    text-decoration:none;
 }
 
-.btn-secondary:hover {
-    background: white;
-    color: #16a34a;
-}
-
-/* =========================
-   SECTIONS
-========================= */
+/* SECTIONS */
 section {
-    background: white;
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 40px;
-    border-radius: 18px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    max-width:900px;
+    margin:50px auto;
+    padding:40px;
+    border-radius:20px;
 }
 
-section h2 {
-    color: #16a34a;
-    margin-bottom: 15px;
-    text-align: center;
-}
-
-/* =========================
-   SKILLS
-========================= */
+/* SKILLS */
 .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 15px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+    justify-items:center;
+}
+
+.skill:nth-child(4) {
+    grid-column:2;
 }
 
 .skill {
-    background: #dcfce7;
-    padding: 15px;
-    border-radius: 12px;
-    text-align: center;
-    font-weight: bold;
+    padding:20px;
+    border-radius:15px;
+    background:#334155;
 }
 
-/* =========================
-   SERVICES
-========================= */
+/* SERVICES */
 .services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+    justify-items:center;
+}
+
+.service-card:nth-child(4) {
+    grid-column:2;
 }
 
 .service-card {
-    background: #f1f5f9;
-    padding: 20px;
-    border-radius: 16px;
-    text-align: center;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-    transition: transform 0.3s;
+    padding:20px;
+    border-radius:15px;
+    background:#334155;
+    text-align:center;
+    transition:0.3s;
 }
 
 .service-card:hover {
-    transform: translateY(-6px);
+    transform:translateY(-10px);
 }
 
-/* =========================
-   CONTACT
-========================= */
-.contact-form {
-    max-width: 450px;
-    margin: auto;
+/* FORM */
+input, textarea {
+    width:100%;
+    padding:12px;
+    margin-bottom:15px;
+    border-radius:10px;
+    border:1px solid #ccc;
 }
 
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 15px;
-    border-radius: 10px;
-    border: 1px solid #ccc;
-    font-size: 15px;
+button {
+    width:100%;
+    padding:12px;
+    background:#22c55e;
+    border:none;
+    border-radius:20px;
 }
 
-.contact-form button {
-    width: 100%;
-    background: #25D366;
-    color: white;
-    border: none;
-    padding: 14px;
-    border-radius: 25px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-/* =========================
-   FOOTER
-========================= */
-footer {
-    text-align: center;
-    padding: 20px;
-    color: #555;
-}
-
-/* =========================
-   WHATSAPP FLOAT
-========================= */
-.whatsapp-float {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #25D366;
-    color: white;
-    width: 55px;
-    height: 55px;
-    border-radius: 50%;
-    text-align: center;
-    line-height: 55px;
-    font-size: 24px;
-    text-decoration: none;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-    z-index: 1000;
-}
-
-/* =========================
-   SCROLL ANIMATION
-========================= */
+/* ANIMATION */
 .reveal {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: all 0.8s ease;
+    opacity:0;
+    transform:translateY(50px);
+    transition:1s;
 }
 
 .reveal.active {
-    opacity: 1;
-    transform: translateY(0);
+    opacity:1;
+    transform:translateY(0);
 }
 
-/* =========================
-   MODE SOMBRE
-========================= */
+/* FOOTER */
+footer {
+    text-align:center;
+    padding:20px;
+}
+
+/* DARK */
 .dark {
-    background: #0f172a;
-    color: white;
+    background:#0f172a;
+    color:white;
 }
 
 .dark section {
-    background: #1e293b;
-}
-
-.dark .skill,
-.dark .service-card {
-    background: #334155;
-}
-
-/* =========================
-   RESPONSIVE MOBILE
-========================= */
-@media (max-width: 768px) {
-
-    .navbar {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .nav-links {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .hero {
-        padding: 60px 15px;
-    }
-
-    .hero h1 {
-        font-size: 28px;
-    }
-
-    .hero p {
-        font-size: 15px;
-    }
-
-    section {
-        margin: 20px 10px;
-        padding: 25px 20px;
-    }
-
-    .skills-grid,
-    .services-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .btn-primary,
-    .btn-secondary {
-        width: 100%;
-        max-width: 300px;
-        margin: 10px auto;
-        display: block;
-    }
+    background:#1e293b;
 }
